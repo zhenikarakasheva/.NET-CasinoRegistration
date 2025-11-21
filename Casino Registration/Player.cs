@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+// F120859 - Жени Каракашева
 namespace Casino_Registration
 {
     //A simple class describing each player enrolled in this casino - they have an username, names and age
