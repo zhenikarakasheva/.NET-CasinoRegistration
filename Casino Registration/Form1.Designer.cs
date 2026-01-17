@@ -30,122 +30,153 @@ namespace Casino_Registration
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.username = new System.Windows.Forms.TextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.names = new System.Windows.Forms.TextBox();
-            this.buttonAddUser = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.buttonAddPlayer = new System.Windows.Forms.Button();
+            this.usernameLabel = new System.Windows.Forms.Label();
+            this.namesLabel = new System.Windows.Forms.Label();
             this.age = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.ageLabel = new System.Windows.Forms.Label();
+            this.playersList = new System.Windows.Forms.ListBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.changeLanguageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bulgarianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showPlayersToolstripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gameBoard = new System.Windows.Forms.Panel();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // username
             // 
-            this.username.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.username.Location = new System.Drawing.Point(764, 34);
+            resources.ApplyResources(this.username, "username");
             this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(199, 30);
-            this.username.TabIndex = 0;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // names
             // 
-            this.names.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.names.Location = new System.Drawing.Point(764, 79);
+            resources.ApplyResources(this.names, "names");
             this.names.Name = "names";
-            this.names.Size = new System.Drawing.Size(199, 30);
-            this.names.TabIndex = 2;
             // 
-            // buttonAddUser
+            // buttonAddPlayer
             // 
-            this.buttonAddUser.BackColor = System.Drawing.SystemColors.Desktop;
-            this.buttonAddUser.FlatAppearance.BorderSize = 0;
-            this.buttonAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAddUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAddUser.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonAddUser.Location = new System.Drawing.Point(776, 175);
-            this.buttonAddUser.Name = "buttonAddUser";
-            this.buttonAddUser.Size = new System.Drawing.Size(178, 37);
-            this.buttonAddUser.TabIndex = 5;
-            this.buttonAddUser.Text = "Add Player to Casino";
-            this.buttonAddUser.UseVisualStyleBackColor = false;
-            this.buttonAddUser.Click += new System.EventHandler(this.addUser_Click);
+            resources.ApplyResources(this.buttonAddPlayer, "buttonAddPlayer");
+            this.buttonAddPlayer.BackColor = System.Drawing.Color.SeaGreen;
+            this.buttonAddPlayer.FlatAppearance.BorderSize = 0;
+            this.buttonAddPlayer.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonAddPlayer.Name = "buttonAddPlayer";
+            this.buttonAddPlayer.UseVisualStyleBackColor = false;
+            this.buttonAddPlayer.Click += new System.EventHandler(this.addUser_Click);
             // 
-            // label1
+            // usernameLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(663, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 20);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Username:";
+            resources.ApplyResources(this.usernameLabel, "usernameLabel");
+            this.usernameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.usernameLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.usernameLabel.ForeColor = System.Drawing.Color.White;
+            this.usernameLabel.Name = "usernameLabel";
             // 
-            // label2
+            // namesLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(684, 85);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 20);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Names:";
+            resources.ApplyResources(this.namesLabel, "namesLabel");
+            this.namesLabel.BackColor = System.Drawing.Color.Transparent;
+            this.namesLabel.ForeColor = System.Drawing.Color.White;
+            this.namesLabel.Name = "namesLabel";
             // 
             // age
             // 
-            this.age.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.age.Location = new System.Drawing.Point(764, 127);
+            resources.ApplyResources(this.age, "age");
             this.age.Name = "age";
-            this.age.Size = new System.Drawing.Size(199, 30);
-            this.age.TabIndex = 8;
             // 
-            // label3
+            // ageLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(705, 127);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 20);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Age:";
+            resources.ApplyResources(this.ageLabel, "ageLabel");
+            this.ageLabel.BackColor = System.Drawing.Color.Transparent;
+            this.ageLabel.ForeColor = System.Drawing.Color.White;
+            this.ageLabel.Name = "ageLabel";
             // 
-            // listBox1
+            // playersList
             // 
-            this.listBox1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 25;
-            this.listBox1.Location = new System.Drawing.Point(397, 238);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(607, 129);
-            this.listBox1.TabIndex = 10;
+            resources.ApplyResources(this.playersList, "playersList");
+            this.playersList.FormattingEnabled = true;
+            this.playersList.Name = "playersList";
+            // 
+            // menuStrip1
+            // 
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
+            this.menuStrip1.BackColor = System.Drawing.Color.Gray;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.changeLanguageToolStripMenuItem,
+            this.showPlayersToolstripMenuItem,
+            this.showGameToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.menuStrip1.Name = "menuStrip1";
+            // 
+            // changeLanguageToolStripMenuItem
+            // 
+            resources.ApplyResources(this.changeLanguageToolStripMenuItem, "changeLanguageToolStripMenuItem");
+            this.changeLanguageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.englishToolStripMenuItem,
+            this.bulgarianToolStripMenuItem});
+            this.changeLanguageToolStripMenuItem.Name = "changeLanguageToolStripMenuItem";
+            // 
+            // englishToolStripMenuItem
+            // 
+            resources.ApplyResources(this.englishToolStripMenuItem, "englishToolStripMenuItem");
+            this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
+            this.englishToolStripMenuItem.Click += new System.EventHandler(this.englishToolStripMenuItem_Click);
+            // 
+            // bulgarianToolStripMenuItem
+            // 
+            resources.ApplyResources(this.bulgarianToolStripMenuItem, "bulgarianToolStripMenuItem");
+            this.bulgarianToolStripMenuItem.Name = "bulgarianToolStripMenuItem";
+            this.bulgarianToolStripMenuItem.Click += new System.EventHandler(this.bulgarianToolStripMenuItem_Click);
+            // 
+            // showPlayersToolstripMenuItem
+            // 
+            resources.ApplyResources(this.showPlayersToolstripMenuItem, "showPlayersToolstripMenuItem");
+            this.showPlayersToolstripMenuItem.Name = "showPlayersToolstripMenuItem";
+            this.showPlayersToolstripMenuItem.Click += new System.EventHandler(this.showPlayersToolStripMenuItem_Click);
+            // 
+            // showGameToolStripMenuItem
+            // 
+            resources.ApplyResources(this.showGameToolStripMenuItem, "showGameToolStripMenuItem");
+            this.showGameToolStripMenuItem.Name = "showGameToolStripMenuItem";
+            this.showGameToolStripMenuItem.Click += new System.EventHandler(this.showGameToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // gameBoard
+            // 
+            resources.ApplyResources(this.gameBoard, "gameBoard");
+            this.gameBoard.BackColor = System.Drawing.Color.ForestGreen;
+            this.gameBoard.Name = "gameBoard";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Casino_Registration.Properties.Resources.casino_fon;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1016, 489);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.gameBoard);
+            this.Controls.Add(this.playersList);
+            this.Controls.Add(this.ageLabel);
             this.Controls.Add(this.age);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.buttonAddUser);
+            this.Controls.Add(this.namesLabel);
+            this.Controls.Add(this.usernameLabel);
+            this.Controls.Add(this.buttonAddPlayer);
             this.Controls.Add(this.names);
             this.Controls.Add(this.username);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Casino Registration";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,14 +185,21 @@ namespace Casino_Registration
         #endregion
 
         private System.Windows.Forms.TextBox username;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox names;
-        private System.Windows.Forms.Button buttonAddUser;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonAddPlayer;
+        private System.Windows.Forms.Label usernameLabel;
+        private System.Windows.Forms.Label namesLabel;
         private System.Windows.Forms.TextBox age;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label ageLabel;
+        private System.Windows.Forms.ListBox playersList;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem changeLanguageToolStripMenuItem;
+        private ToolStripMenuItem englishToolStripMenuItem;
+        private ToolStripMenuItem bulgarianToolStripMenuItem;
+        private ToolStripMenuItem showPlayersToolstripMenuItem;
+        private ToolStripMenuItem showGameToolStripMenuItem;
+        private ToolStripMenuItem exitToolStripMenuItem;
+        private Panel gameBoard;
     }
 }
 
